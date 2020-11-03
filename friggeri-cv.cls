@@ -19,7 +19,7 @@
 \definecolor{whitish}{HTML}{FFFFFF}
 \definecolor{black}{HTML}{000000}
 
-\definecolor{darkgray}{HTML}{333333}
+\definecolor{darkgray}{HTML}{161616}
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgrayish}{HTML}{AAAAAA}
 \definecolor{lightgray}{HTML}{777777}
@@ -194,7 +194,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(1.5, 4.66)
+  \begin{textblock}{3.6}(1.5, 4.55)
       \begin{flushright}
       \obeycr
     }{%
