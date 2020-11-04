@@ -113,7 +113,7 @@
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{whitish}%
-      {\thinfont #1}{\bodyfont \color{darkgray} #2}
+      {\thinfont #1}{\bodyfont \ \boldfont \color{darkgray} #2}
     };
     \node [anchor=north] at (name.south) {%
       \fontsize{14pt}{24pt}\color{whitish}%
@@ -172,18 +172,19 @@
 
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}%
 }{%
-  \end{tabular*}
+  \end{tabular*}%
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
   \small{#1}&\parbox[t]{12.3cm}{%
     \textbf{#2}%
     \hfill%
-    { \small\addfontfeature{Color=lightgray} #3}\\%
-    { \small #4\vspace{\parsep} \vspace{1mm}}%
-  }\\}
+    {\small\addfontfeature{Color=lightgray} #3}\\%
+    {\small #4 \vspace{\parsep} \vspace{1mm}}%
+  }\\%
+}
 
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
